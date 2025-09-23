@@ -1,1 +1,56 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GLEN NEWS </title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 700px; margin: auto; padding: 20px; background: #f9f9f9; }
+    h1 { color: #2c3e50; text-align: center; }.post { background: white; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }.post img { width: 100%; border-radius: 8px; }.post p { font-size: 1.1em; color: #34495e; }
+    form { margin-bottom: 20px; }
+    input[type="text"], input[type="url"] { width: 100%; padding: 8px; margin: 6px 0; box-sizing: border-box; border-radius: 4px; border: 1px solid #ccc; }
+    button { background-color: #e91e63; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #c2185b; }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to GLEN NEWS </h1>
+
+  <form id="newsForm">
+    <input type="text" id="newsText" placeholder="Write your news here..." required />
+    <input type="url" id="newsImg" placeholder="Image URL (optional)" />
+    <button type="submit">Add News</button>
+  </form>
+
+  <div id="posts">
+    <div class="post">
+      <p>Here’s an adorable moment from today! 🐶</p>
+      <img src="b436602a-6075-4e50-a6cb-78f6f0b527e4.jpg" alt="Cute Puppy" />
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('newsForm');
+    const posts = document.getElementById('posts');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const text = document.getElementById('newsText').value;
+      const img = document.getElementById('newsImg').value;
+
+      const newPost = document.createElement('div');
+      newPost.className = 'post';
+
+      let content = `<p>${text}</p>`;
+      if(img) content += `<img src="${img}" alt="News Image" />`;
+
+      newPost.innerHTML = content;
+      posts.prepend(newPost);
+
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
 
