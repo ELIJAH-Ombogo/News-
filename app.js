@@ -1,9 +1,9 @@
 
 // Firebase config - replace with your details
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
+  apiKey: "AIzaSyDSPj_mNfGmwafZo3FJ1almi6jnqivHuPQ",
+  authDomain: "glenmedia-47752.firebaseapp.com",
+  projectId: "glenmedia-47752",
   // add other needed config values
 };
 
