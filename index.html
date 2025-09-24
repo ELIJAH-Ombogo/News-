@@ -1,0 +1,36 @@
+inde<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotating GLEN Logo</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #111;
+    }
+
+    .logo {
+      width: 200px;
+      height: 200px;
+      animation: spin 6s linear infinite;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Replace the src with your GLEN logo image -->
+  <img src="glen-logo.png" alt="GLEN Logo" class="logo">
+</body>
+</html>
